@@ -1,0 +1,285 @@
+<template name="layout">
+
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="img/disruptFav.png" rel="icon" type="image/x-icon" />
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    </head>
+    <a name="top" id="top"></a>
+    <nav class="navbar homepage-intro fadeIn" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand text-center hvr-pulse-grow" href="/"><img src="img/lakevistalogo.png"></a>
+                <a class="navbar-brand text-center hvr-pulse-grow" href="http://facebook.com/disruptlabs" target="_blank">&nbsp;<i class="fa fa-facebook-official"></i></a>
+                <a class="navbar-brand text-center hvr-pulse-grow" href="http://twitter.com/disrupt_io" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a class="navbar-brand text-center hvr-pulse-grow" href="http://linkedin.com/company/disrupt-labs" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a class="navbar-brand text-center hvr-pulse-grow" href="http://instagram.com/disruptlabs" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a class="hvr-underline-from-center" href="/#top">Home<span class="sr-only">(current)</span></a></li>
+                    <li><a class="hvr-underline-from-center" href="/application#content">Apply</a></li>
+                    <li><a class="hvr-underline-from-center" href="/plans#content">Floor-Plans</a></li>
+                    <li><a class="hvr-underline-from-center" href="/amenities#content">Amenities</a></li>
+                    <li><a class="hvr-underline-from-center" href="/contact#content">Contact</a></li>
+                    <li><a class="hvr-underline-from-center" href="/login#content">Residents Portal</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- <div class="hero-unit">
+        <div class="container-fluid" id="top">
+            <video loop muted autoplay class="fullscreen-bg__video">
+                    <source src="/video/3danimation-1.mp4" type="video/mp4">
+                    <source src="/video/3danimation-1.webm" type="video/webm">
+                    <source src="/video/3danimation-1.oog" type="video/oog">
+                </video>
+            <div class="hero-unit-inner text-center animated zoomIn">
+                <h1>Welcome Home</h1>
+                
+                <br>
+                <div class="col-sm-4">
+                <a href=""><i class="fa fa-envelope"></i><br>Inquire</a>
+                </div>
+                <div class="col-sm-4 col-sm-offset-4">
+                <a href=""><i class="fa fa-video-camera"></i><br>Virtual Tour</a>
+                </div>
+                <br>
+                <br>
+                <a href="#content" class="scroll"><i id="scrollArrow" class="fa fa-chevron-down animated bounce"></i></a>
+                <div id="startchange"></div>
+            </div>
+        </div>
+    </div> -->
+    <div class="container-fluid">
+        <div class="row homepage-intro fadeIn">
+            <video loop muted autoplay class="fullscreen-bg__video">
+                <source src="/video/3danimation-1.mp4" type="video/mp4">
+                <source src="/video/3danimation-1.webm" type="video/webm">
+                <source src="/video/3danimation-1.oog" type="video/oog">
+            </video>
+            <div class="vidText homepage-intro fadeIn" data-wow-delay=".3s">
+                <h1>Welcome Home</h1>
+                <br>
+                <div class="col-sm-4">
+                    <a href="/contact#content"><i class="fa fa-envelope"></i><br>Inquire</a>
+                </div>
+                <div class="col-sm-4 col-sm-offset-4">
+                    <a href="/virtualTour#content"><i class="fa fa-video-camera"></i><br>Virtual Tour</a>
+                </div>
+                <br>
+                <br>
+                <a href="#content" class="scroll"><i id="scrollArrow" class="fa fa-chevron-down animated bounce"></i></a>
+            </div>
+        </div>
+    </div>
+    <div id="startchange"></div>
+    <a id="content"></a>
+    <a name="content"></a>
+    <div id="content"></div>
+    <div class="socialSidebar text-center">
+        <a class="hvr-pulse-grow" href="http://facebook.com/disruptlabs" target="_blank"><i class="fa fa-facebook"></i></a>
+        <br>
+        <a class="hvr-pulse-grow" href="http://twitter.com/disrupt_io" target="_blank"><i class="fa fa-twitter"></i></a>
+        <br>
+        <a class="hvr-pulse-grow" href="http://instagram.com/disruptlabs" target="_blank"><i class="fa fa-instagram"></i></a>
+        <br>
+        <a class="hvr-pulse-grow" href="http://instagram.com/disruptlabs" target="_blank"><i class="fa fa-pinterest"></i></a>
+        <br>
+    </div>
+    {{>yield}}
+    <!-- <a id="contact"></a>
+        <div class="container-fluid contact">
+            <div class="row titlesHomepage text-center">
+                <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 wow fadeIn" data-wow-delay=".3s">
+                    <h2 class="title" id="title-small">Contact <i class="fa fa-envelope-o"></i></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3 text-center wow fadeIn" data-wow-delay=".3s">
+                    <p>If you're ready to take the step toward designing your new disruptive digital presence and increasing your business, then please contact us below to get started.</p>
+                    <hr>
+                </div>
+                <div class="col-sm-10 col-sm-offset-1 wow fadeIn" data-wow-delay=".3s">
+                    {{>contactForm}}
+                </div>
+                <div class="col-sm-10 col-sm-offset-1 thankYou text-center fadeIn homepage-intro" id="thankYou" style="display:none">
+                    <i class="fa fa-check fa-large"></i>
+                    <p>Thank you for contacting us, we'll be in touch shortly!</p>
+                </div>
+            </div>
+        </div> -->
+    <footer>
+        <div class="container-fluid">
+            <div class="row footerRow">
+                <div class="col-sm-3">
+                    <article>
+                        <h4>Sales Office</h4>
+                        <address>
+                            <i class="fa fa-map-marker"></i>&nbsp;<a href="">25 Main Street,<br> San Antonio, Texas 78257</a>
+                        </address>
+                        <i class="fa fa-clock-o"></i> &nbsp; <a href="">M - F 9:30-6:00</a>
+                        <br>
+                        <i class="fa fa-phone"></i> &nbsp;<a href="tel:1-800-111-1111">1 (800) 111-1111</a>
+                        <br>
+                        <i class="fa fa-envelope-o"></i> &nbsp;<a href="mailto:">hello@gmail.com</a>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                <h4>Newsletter</h4>
+                    <!-- Begin MailChimp Signup Form -->
+                    <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+                    <div id="mc_embed_signup">
+                        <form action="//disruptlabs.us13.list-manage.com/subscribe/post?u=41f76bee44a6bea0cd66f3f69&amp;id=91f2809aff" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                                <label for="mce-EMAIL"></label>
+                                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                    <input type="text" name="b_41f76bee44a6bea0cd66f3f69_91f2809aff" tabindex="-1" value="">
+                                </div>
+                                <div class="clear">
+                                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn hvr-radial-out">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--End mc_embed_signup-->
+                    <br>
+                    <p>The developers reserve the right to make modifications and changes to the information contained herein. Renderings, photos and sketches are representational and may not be totally accurate. Dimensions, sizes, specifications, layouts, views and materials are approximate and subject to change without notice.</p>
+                </div>
+                <div class="col-sm-3">
+                    <p>Exclusively developed by</p>
+                    <h6>Alfra Developers Ltd.</h6>
+                    <p>Commercial & Residential Development</p>
+                    <p>&copy; Lake Vista Apartments 2016</p>
+                    <p>Website Design by <a href="">Disrupt Labs</a></p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <br>
+                <div class="col-sm-4 col-xs-12 pull-left">
+                </div>
+                <div class="col-xs-12">
+                    <hr>
+                    <p>
+                        <a data-toggle="modal" data-target=".termsOfService-modal-lg">Terms of Service</a>&nbsp; | &nbsp;<a data-toggle="modal" data-target=".privacyPolicy-modal-lg">Privacy Policy</a>
+                    </p>
+                </div>
+                <div class="modal fade termsOfService-modal-lg" tabindex="-1" role="dialog" aria-labelledby="termsOfService" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <embed id="modalEmbed" src="pdf/TermsOfService.pdf">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade privacyPolicy-modal-lg" tabindex="-1" role="dialog" aria-labelledby="privacyPolicy" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <embed id="modalEmbed" src="pdf/PrivacyPolicy.pdf">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="backToTop hvr-bob">
+        <a href="#top" class="fa fa-arrow-up fa-lg "></a>
+    </div>
+    <script>
+    $(document).ready(function() {
+        var scroll_start = 0;
+        var startchange = $('#startchange');
+        var offset = startchange.offset();
+        if (startchange.length) {
+            $(document).scroll(function() {
+                scroll_start = $(this).scrollTop();
+                if (scroll_start > offset.top) {
+
+                    $(".backToTop a").css({
+                        'color': '#ffffff',
+                        'background': '#555555'
+
+                    });
+                } else {
+                    $(".backToTop a").css({
+                        'color': 'rgba(0,0,0,0)',
+                        'background': 'transparent'
+
+                    });
+
+
+                }
+            });
+        }
+
+        $("#contactForm").submit(function(e) {
+            $("#contactForm").css("display", "none");
+            $("#thankYou").css("display", "");
+        });
+    });
+
+    $(function() {
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 400) {
+                $(".navbar-header").addClass('smaller');
+                $(".navbar-nav").addClass('smaller');
+                $(".navbar").addClass('smaller');
+                $(".navbar").css('position', 'fixed');
+
+            } else {
+                $(".navbar-header").removeClass("smaller");
+                $(".navbar-nav").removeClass("smaller");
+                $(".navbar").removeClass('smaller');
+                $(".navbar").css('position', 'absolute');
+
+            }
+        });
+    });
+
+
+    new WOW().init();
+    </script>
+    <script type="text/javascript">
+    var $root = $('html, body');
+    $('a').click(function() {
+        var href = $.attr(this, 'href');
+        $root.animate({
+            scrollTop: $(href).offset().top
+        }, 500, function() {
+            window.location.hash = href;
+        });
+        return false;
+    });
+    </script>
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-76020744-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+</template>

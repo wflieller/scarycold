@@ -1,0 +1,211 @@
+<template name="application">
+    <div class="container-fluid homepage" id="bio">
+
+    <div class="row titlesHomepage text-center">
+            <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">
+                <h2 class="wow fadeIn" data-wow-delay=".6s">Apply</h2>
+            </div>
+        </div>
+        
+        <div class="container contentRow">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3 col-xs-12 text-center wow fadeIn" data-wow-delay=".3s">
+
+                <div id="new-account" class="app-create-account active">
+<h2 class="form-header">Create an Account to Begin</h2>
+<p class="form-instructions">
+To start your application, create an account. We will be able to save your progress and enable you to come back anytime to check on the status of your application.
+</p>
+<p class="form-instructions">
+For any questions, please call <a class="tel" href="tel:210-495-2583"><span class="phone-no-break">(210) 495-2583</span></a>.
+</p>
+<form id="create_applicant" class="create-account-form vertical-form" method="post" name="create_applicant" action="https://sonterrablue.prospectportal.com/Apartments/module/application_authentication/action/insert_applicant/">
+<ul class="vertform-list">
+<li class="vertform-item text">
+<label>First Name <span class="req">*</span></label>
+<input type="text" name="applicant[name_first]" maxlength="50" value="" tabindex="1" data-required="">
+</li>
+<li class="vertform-item text">
+<label>Last Name <span class="req">*</span></label>
+<input type="text" name="applicant[name_last]" maxlength="50" value="" tabindex="2" data-required="">
+</li>
+<li class="vertform-item combo">
+<label>Primary Phone <span class="req">*</span></label>
+<div class="combo-item col-7">
+<div class="multi-input multi-3" data-ui="multi-input-field" data-format="000-000-0000" data-delimiter="–" data-validate="phone-usa" data-required="">
+<input type="text" class="chars-3" pattern="[0-9]*" novalidate="" value="" tabindex="3" data-multi-input="field" maxlength="3" placeholder="000" data-index="0"><span class="delimiter">–</span>
+<input type="text" class="chars-3" pattern="[0-9]*" novalidate="" value="" tabindex="4" data-multi-input="field" maxlength="3" placeholder="000" data-index="1"><span class="delimiter">–</span>
+<input type="text" class="chars-4" pattern="[0-9]*" novalidate="" value="" tabindex="5" data-multi-input="field" maxlength="4" placeholder="0000" data-index="2">
+<input type="hidden" name="applicant[primary_phone_number]" value="" data-multi-input="formatted-value">
+</div>
+</div>
+<div class="combo-item col-3">
+<div class="select-menu light" data-ui="select-menu">
+<span class="select-menu-val" data-menu="value">
+Home
+</span>
+<i class="icon" data-app-icon="V"></i>
+<select name="applicant[primary_phone_number_type_id]" tabindex="6" data-menu="selector">
+<option value="2" selected="">
+Home
+</option>
+<option value="3">
+Office
+</option>
+<option value="4">
+Mobile
+</option>
+</select>
+</div>
+</div>
+</li>
+<li id="secondary_number_row" class="vertform-item combo">
+<label>Secondary Phone <span id="secondary_number_req" class="req is-hidden">*</span></label>
+<input type="hidden" name="application[validate_secondary_phone_number]" id="validate_secondary_number" value="0">
+<div class="combo-item col-7">
+<div id="secondary_number_field" class="multi-input multi-3" data-ui="multi-input-field" data-format="000-000-0000" data-delimiter="–" data-validate="phone-usa">
+<input type="text" class="chars-3" pattern="[0-9]*" novalidate="" value="" tabindex="7" data-multi-input="field" maxlength="3" placeholder="000" data-index="0"><span class="delimiter">–</span>
+<input type="text" class="chars-3" pattern="[0-9]*" novalidate="" value="" tabindex="8" data-multi-input="field" maxlength="3" placeholder="000" data-index="1"><span class="delimiter">–</span>
+<input type="text" class="chars-4" pattern="[0-9]*" novalidate="" value="" tabindex="9" data-multi-input="field" maxlength="4" placeholder="0000" data-index="2">
+<input type="hidden" name="applicant[secondary_phone_number]" value="" data-multi-input="formatted-value">
+</div>
+</div>
+<div class="combo-item col-3">
+<div class="select-menu light" data-ui="select-menu">
+<span class="select-menu-val" data-menu="value">
+Mobile
+</span>
+<i class="icon" data-app-icon="V"></i>
+<select name="applicant[secondary_phone_number_type_id]" tabindex="10" data-menu="selector">
+<option value="2">
+Home
+</option>
+<option value="3">
+Office
+</option>
+<option value="4" selected="">
+Mobile
+</option>
+</select>
+</div>
+</div>
+</li>
+<li class="vertform-item text">
+<label>Email <span class="req">*</span></label>
+<input type="email" id="applicant_username" name="applicant[username]" maxlength="240" value="" tabindex="11" data-required="" autocomplete="off">
+</li>
+<li class="vertform-item text">
+<label>Password <span class="req">*</span></label>
+<input type="password" id="applicant_password" name="applicant[password]" maxlength="50" value="" tabindex="12" data-required="" autocomplete="off">
+</li>
+<li class="vertform-item text">
+<label>Confirm Password <span class="req">*</span></label>
+<input type="password" name="applicant[password_confirm]" maxlength="50" value="" tabindex="13" data-required="" autocomplete="off">
+</li>
+<input type="hidden" id="default_company_application_id" name="application[company_application_id]" value="9508">
+<input type="hidden" id="show_terms_and_conditions" name="show_terms_and_conditions" value="1">
+<li class="vertform-item select customer_relationship_list" id="customer_relationship_list_9508" style="display:none;">
+<label>Occupant Type <span class="req">*</span></label>
+<div class="select-menu light" data-ui="select-menu">
+<span class="select-menu-val" data-menu="value">Primary</span>
+<i class="icon" data-app-icon="V"></i>
+<select class="js-toggle-terms customer_relationship_select" tabindex="14" data-menu="selector" id="customer_relationship_select_9508" name="applicant[customer_relationship_id]" onchange="$('#customer_relationship_id_hidden').val( this.value )">
+<option value="379">Primary</option>
+</select>
+</div>
+</li>
+<input type="hidden" value="379" id="customer_relationship_id_hidden" name="applicant[customer_relationship_id]">
+<li id="lead_source_row" class="vertform-item select">
+<label>How did you hear about us? <span id="lead_source_req" class="req is-hidden">*</span></label>
+<input type="hidden" id="validate_lead_source" name="application[validate_lead_source]" value="0">
+<div id="lead_source_field" class="select-menu light" data-ui="select-menu">
+<span class="select-menu-val" data-menu="value">Select One</span>
+<i class="icon" data-app-icon="V"></i>
+<select name="application[lead_source_id]" tabindex="14" data-menu="selector">
+<option value="">Select One</option>
+<option value="63335">
+Apartment Finder
+</option>
+<option value="27989">
+Apartment Guide
+</option>
+<option value="27990">
+Apartments.com
+</option>
+<option value="39062">
+Craigslist
+</option>
+<option value="63496">
+Direct Mailer
+</option>
+<option value="39066">
+Drive-by/Walk-in
+</option>
+<option value="34239">
+Facebook
+</option>
+<option value="8461">
+ForRent.com
+</option>
+<option value="28010">
+Locator
+</option>
+<option value="34509">
+Move.com
+</option>
+<option value="34240">
+Mynewplace.com
+</option>
+<option value="39079">
+Property Website
+</option>
+<option value="63336">
+Reach Local
+</option>
+<option value="63337">
+Referral
+</option>
+<option value="28017">
+Rent.com
+</option>
+<option value="34616">
+Signage
+</option>
+<option value="28020">
+Transfer
+</option>
+<option value="63338">
+Yelp
+</option>
+<option value="34657">
+Zillow
+</option>
+</select>
+</div>
+</li>
+<input type="hidden" name="application[desired_movein_date]" value="05/13/2016">
+<li id="terms_row" class="vertform-item checkbox">
+<input type="checkbox" id="agrees_to_terms" name="agrees_to_terms" value="1" disabled="">
+<label for="agrees_to_terms">
+<span class="req terms">*</span>
+I have viewed and agree to the Terms &amp; Conditions.
+<a class="view-terms-link js-allow-checkbox" href="#" data-modal="open" data-target="#agrees_to_terms" data-class="policy-modal" data-title="Terms and Conditions">Click here to view &amp; agree</a>
+</label>
+</li>
+<li class="vertform-item submit">
+<input type="hidden" name="is_new_applicant" value="1">
+<a id="create-app-btn" class="btn primary js-app-nav" href="#" data-action="submit" data-load-msg="create" data-target="create_applicant">
+Create Account
+</a>
+</li>
+</ul>
+</form>
+</div>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</template>
